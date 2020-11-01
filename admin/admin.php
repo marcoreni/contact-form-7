@@ -216,6 +216,9 @@ function wpcf7_load_contact_form_admin() {
 		$args['mail_2'] = isset( $_POST['wpcf7-mail-2'] )
 			? $_POST['wpcf7-mail-2'] : array();
 
+		$args['mail_3'] = isset( $_POST['wpcf7-mail-3'] )
+			? $_POST['wpcf7-mail-3'] : array();
+
 		$args['messages'] = isset( $_POST['wpcf7-messages'] )
 			? $_POST['wpcf7-messages'] : array();
 

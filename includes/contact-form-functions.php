@@ -142,6 +142,7 @@ function wpcf7_save_contact_form( $args = '', $context = 'save' ) {
 		'form' => null,
 		'mail' => null,
 		'mail_2' => null,
+		'mail_3' => null,
 		'messages' => null,
 		'additional_settings' => null,
 	) );
@@ -181,6 +182,10 @@ function wpcf7_save_contact_form( $args = '', $context = 'save' ) {
 
 	if ( null !== $args['mail_2'] ) {
 		$properties['mail_2'] = wpcf7_sanitize_mail( $args['mail_2'] );
+	}
+
+	if ( null !== $args['mail_3'] ) {
+		$properties['mail_3'] = wpcf7_sanitize_mail( $args['mail_3'] );
 	}
 
 	if ( null !== $args['messages'] ) {

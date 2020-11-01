@@ -44,7 +44,7 @@ function wpcf7_convert_to_cpt( $new_ver, $old_ver ) {
 		if ( $post_id ) {
 			update_post_meta( $post_id, '_old_cf7_unit_id', $row->cf7_unit_id );
 
-			$metas = array( 'form', 'mail', 'mail_2', 'messages', 'additional_settings' );
+			$metas = array( 'form', 'mail', 'mail_2', 'mail_3', 'messages', 'additional_settings' );
 
 			foreach ( $metas as $meta ) {
 				update_post_meta( $post_id, '_' . $meta,

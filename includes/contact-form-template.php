@@ -9,6 +9,8 @@ class WPCF7_ContactFormTemplate {
 			$template = self::mail();
 		} elseif ( 'mail_2' == $prop ) {
 			$template = self::mail_2();
+		} elseif ( 'mail_3' == $prop ) {
+			$template = self::mail_3();
 		} elseif ( 'messages' == $prop ) {
 			$template = self::messages();
 		} else {
@@ -106,6 +108,43 @@ class WPCF7_ContactFormTemplate {
 			'recipient' => '[your-email]',
 			'additional_headers' => sprintf( 'Reply-To: %s',
 				get_option( 'admin_email' ) ),
+			'attachments' => '',
+			'use_html' => 0,
+			'exclude_blank' => 0,
+		);
+
+		return $template;
+	}
+
+	public static function mail_3() {
+		$template = array(
+			'active' => false,
+			'subject' => sprintf(
+				/* translators: 1: blog name, 2: [your-subject] */
+				_x( '%1$s "%2$s"', 'mail subject', 'contact-form-7' ),
+				'[_site_title]',
+				'[your-subject]'
+			),
+			'sender' => sprintf(
+				'%s <%s>',
+				'[_site_title]',
+				self::from_email()
+			),
+			'body' =>
+				__( 'Message Body:', 'contact-form-7' )
+				. "\n" . '[your-message]' . "\n\n"
+				. '-- ' . "\n"
+				. sprintf(
+					/* translators: 1: blog name, 2: blog URL */
+					__( 'This e-mail was sent from a contact form on %1$s (%2$s)', 'contact-form-7' ),
+					'[_site_title]',
+					'[_site_url]'
+				),
+			'recipient' => '[your-email]',
+			'additional_headers' => sprintf(
+				'Reply-To: %s',
+				'[_site_admin_email]'
+			),
 			'attachments' => '',
 			'use_html' => 0,
 			'exclude_blank' => 0,

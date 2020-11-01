@@ -490,6 +490,11 @@ class WPCF7_Submission {
 				$additional_mail['mail_2'] = $mail_2;
 			}
 
+			if ( $mail_3 = $contact_form->prop( 'mail_3' )
+			and $mail_3['active'] ) {
+				$additional_mail['mail_3'] = $mail_3;
+			}
+
 			$additional_mail = apply_filters( 'wpcf7_additional_mail',
 				$additional_mail, $contact_form
 			);

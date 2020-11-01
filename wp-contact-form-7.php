@@ -1,8 +1,8 @@
 <?php
 /*
-Plugin Name: Contact Form 7
+Plugin Name: Contact Form 7 Extended
 Plugin URI: https://contactform7.com/
-Description: Just another contact form plugin. Simple but flexible.
+Description: Just another contact form plugin. Simple but flexible. - Extended with mail3
 Author: Takayuki Miyoshi
 Author URI: https://ideasilo.wordpress.com/
 Text Domain: contact-form-7

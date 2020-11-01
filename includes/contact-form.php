@@ -219,6 +219,7 @@ class WPCF7_ContactForm {
 			'form' => '',
 			'mail' => array(),
 			'mail_2' => array(),
+			'mail_3' => array(),
 			'messages' => array(),
 			'additional_settings' => '',
 		) );

@@ -189,6 +189,7 @@ class WPCF7_ConfigValidator {
 		$this->validate_form();
 		$this->validate_mail( 'mail' );
 		$this->validate_mail( 'mail_2' );
+		$this->validate_mail( 'mail_3' );
 		$this->validate_messages();
 		$this->validate_additional_settings();
 

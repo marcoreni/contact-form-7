@@ -84,6 +84,13 @@ function wpcf7_editor_panel_mail( $post ) {
 		'title' => __( 'Mail (2)', 'contact-form-7' ),
 		'use' => __( 'Use Mail (2)', 'contact-form-7' ),
 	) );
+
+	wpcf7_editor_box_mail( $post, array(
+		'id' => 'wpcf7-mail-3',
+		'name' => 'mail_3',
+		'title' => __( 'Mail (3)', 'contact-form-7' ),
+		'use' => __( 'Use Mail (3)', 'contact-form-7' ),
+	) );
 }
 
 function wpcf7_editor_box_mail( $post, $args = '' ) {
